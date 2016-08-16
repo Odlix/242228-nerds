@@ -5,7 +5,7 @@
     <title>Нёрдс Главная страница</title>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="container">
         <a href="#" class="logo"><img src="src="http://placehold.it/150x100"" alt="logo"></a>
         <nav class="header-menu">
@@ -28,44 +28,39 @@
         <a href="#">КОРЗИНА</a>
       </div>
       </div>
-    </div>
-    <div class="index">
+    </header>
+    <main class="index">
       <!--Слайдер-->
       <div class="advantages">
         <div class="advantages-text">
           <h2>Долго, дорого, скрупулезно.</h2>
-          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-          <a class="btn=more" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <span>Математически выверенный дизайн для вашего сайта или мобильного приложения</span>
+          <a class="btn-more" href="#">УЗНАТЬ БОЛЬШЕ</a>
         </div>
         <div class="advantages-img">
           <img src="http://placehold.it/300x200" alt="Nerds">
         </div>
       </div>
-      <!--Таблица с плюсами-->
+      <!--div с плюсами-->
       <div class="what-we-do">
-        <table class="do-table">
-          <tr class="do-images">
-            <td><img src="http://placehold.it/250x150" alt="web"></td>
-            <td><img src="http://placehold.it/250x150" alt="apps"></td>
-            <td><img src="http://placehold.it/250x150" alt="present"></td>
-          </tr>
-          <tr class="do-text">
-            <td>
-              <b>ВЕБ-САЙТЫ</b><br><p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            </td>
-            <td>
-              <b>ПРИЛОЖЕНИЯ</b><br><p>Покорите топ-10 приложений в AppStore и Google Play</p>
-            </td>
-            <td>
-              <b>ПРЕЗЕНТАЦИИ</b><br><p>Вы даже не подозреваете, насколько вы изумительны!</p>
-            </td>
-          </tr>
-          <tr class="do-btn">
-            <td><a class="btn web" href="#">ЗАКАЗАТЬ</a></td>
-            <td><a class="btn apps" href="#">ЗАКАЗАТЬ</a></td>
-            <td><a class="btn presents" href="#">ЗАКАЗАТЬ</a></td>
-          </tr>
-        </table>
+        <div class="we-do-card">
+          <img src="http://placehold.it/250x150" alt="web">
+          <span>Веб-сайты</span>
+          <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+          <a href="#" class="btn-buy">Заказать</a>
+        </div>
+        <div class="we-do-card">
+          <img src="http://placehold.it/250x150" alt="apps">
+          <span>Приложения</span>
+          <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+          <a href="#" class="btn-buy">Заказать</a>
+        </div>
+        <div class="we-do-card">
+          <img src="http://placehold.it/250x150" alt="present">
+          <span>Презентации</span>
+          <p>ПРЕЗЕНТАЦИИ</b><p>Вы даже не подозреваете, насколько вы изумительны!</p>
+          <a href="#" class="btn-buy">Заказать</a>
+        </div>
       </div>
       <hr>
       <!--Рассказ о nerds-->
@@ -73,31 +68,21 @@
         <div class="about-text">
           <h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
           <p>Исповедуем принципы минимализма и чистоты. Ставим Математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
-          <img src="src="http://placehold.it/150x100"" alt="nerds">
+          <span>Выполняем заказы на разработку:</span>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
         </div>
-        <div class="about-table">
-          <table class="table-we-do">
-            <tr>
-              <td>ВЫПОЛНЯЕМ ЗАКАЗЫ НА РАЗРАБОТКУ:</td>
-              <td>КАК МЫ РАБОТАЕМ:</td>
-            </tr>
-            <tr>
-              <td>
-                <ul>
-                  <li>Веб-сайтов любой сложности</li>
-                  <li>Мобильных приложений для iOS и Android</li>
-                  <li>Слайдшоу и видео для корпоративных презентаций</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>С самоотдачей 146%</li>
-                  <li>Соблюдая сроки на 100%</li>
-                  <li>По предоплате 50%</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
+        <div class="about-how">
+          <img src="src="http://placehold.it/150x100"" alt="nerds">
+          <span>Как мы работаем:</span>
+          <ul>
+            <li>Веб-сайтов любой сложности</li>
+            <li>Мобильных приложений для iOS и Android</li>
+            <li>Слайдшоу и видео для корпоративных презентаций</li>
+          </ul>
         </div>
       </div>
       <hr>
@@ -108,30 +93,30 @@
       </div>
       <hr>
       <div class="map">
-        <article>
+        <div class="our-address">
           <b>NЁRDS DESIGN STUDIO</b>
-          <br>
-          <p>
+
+          <address>
             191186, Санкт-Петербург,...
             <br>
             тел. +7 (812) 275-75-75
-          </p>
+          </address>
           <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
-        </article>
+        </div>
       </div>
       <footer class="social">
-        <section class="social-footer">
+        <div class="social-footer">
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
           <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        </section>
-        <section class="lets-friend">
+        </div>
+        <div class="lets-friend">
           <h2>Давайте дружить, это выгодно!</h2>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-        </section>
+          <span>Скидка 10% для друзей из социальных сетей.</span>
+        </div>
       </footer>
 
-    </div><!--index div-->
+    </main><!--index div-->
 
   </body>
 </html>
