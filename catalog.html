@@ -8,8 +8,8 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
+  <header class="header clearfix">
+    <div class="container clearfix">
       <a href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
       <nav class="header-menu">
         <ul>
@@ -28,24 +28,26 @@
         </ul>
       </nav>
       <div class="cart">
-      <a href="#">КОРЗИНА</a>
+        <a href="#">КОРЗИНА</a>
+      </div>
+      <div class="welcome">
+        <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
+      </div>
     </div>
-    </div>
+
   </header>
 
-  <div class="welcome">
-    <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
-  </div>
-
-  <main class="index">
+  <main class="container">
     <!--Левое меню сортировки-->
     <div class="left-menu">
       <div class="price">
-        <span>Стоимость</span> <!--интерактивный элемент?-->
-        <div class="slider"><img src="#" alt="#"></div>
-        <div class="range">
-          <span>от <span class="slider">0</span> до <span class="slider">15000</span></span>
-        </div>
+        <span>Стоимость</span>
+          <div class="slider">
+            <input type="range" name="name" value="">
+          </div>
+          <input type="text" name="name" value="0">
+          <input type="text" name="name" value="15000">
+
       </div>
       <!--Сетка-->
       <div class="grid">
@@ -102,20 +104,22 @@
             </li>
 
           </ul>
+          <div class="show-button"> <!--отдельная клавиша Показать-->
+            <a href="#" class="btn-show"><input type="submit" value="Показать"></a>
+          </div>
         </form>
       </div>
-      <!--отдельная клавиша Показать-->
-      <div class="show-button">
-        <a href="#" class="btn-show">ПОКАЗАТЬ</a>
-      </div>
+
     </div>
     <!--Карточки-->
     <div class="cards-index"> <!--Сортировка?-->
       <div class="sorted">
         <b>СОРТИРОВАТЬ:</b>
-        <span>ПО ЦЕНЕ</span>
-        <span>ПО ТИПУ</span>
-        <span>ПО ФУНКЦИОНАЛУ</span>
+        <a href="#">ПО ЦЕНЕ</a>
+        <a href="#">ПО ТИПУ</a>
+        <a href="#">ПО ФУНКЦИОНАЛУ</a>
+        <span>▼</span>
+        <span>▲</span>
       </div>
       <div class="layouts">
         <div class="layout-card">
@@ -123,7 +127,7 @@
         </div>
         <div class="layout-card"> <!--карточка с кнопкой-->
             <img src="img/card-2.jpg" alt="Макет" width="240" height="270">
-            <div>
+            <div class="card-description">
               <span>SUNSET</span>
               <span>Интернет-магазин с личным кабинетом</span>
               <div class="button-price">
@@ -145,8 +149,6 @@
         </div>
       </div>
     </div>
-
-  </main><!--index main-->
     <div class="pagination">
       <ul>
         <li><a href="#">1</a></li>
@@ -155,29 +157,33 @@
         <li><a href="#">Следующая</a></li>
       </ul>
     </div>
-    <div class="map">
-      <img src="img/map.jpg" alt="map" width="1199" height="416">
-      <img src="img/logo-map.png" alt="logo-map" width="92" height="37">
-      <div class="our-address">
-        <b>NЁRDS DESIGN STUDIO</b>
 
-        <address>
-          191186, Санкт-Петербург,...
-          <br>
-          тел. +7 (812) 275-75-75
-        </address>
-        <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
-      </div>
-    </div>
+  </main><!--index main-->
     <footer class="social">
-      <div class="social-footer">
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+      <div class="map">
+        <img src="img/map.jpg" alt="map" width="1199" height="416">     <!--!!!! Карта, как в полный размер -->
+        <img src="img/logo-map.png" alt="logo-map" width="92" height="37">
+        <div class="our-address">
+          <b>NЁRDS DESIGN STUDIO</b>
+
+          <address>
+            191186, Санкт-Петербург,...
+            <br>
+            тел. +7 (812) 275-75-75
+          </address>
+          <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
+        </div>     <!--Как поставить на место? -->
       </div>
-      <div class="lets-friend">
-        <h2>Давайте дружить, это выгодно!</h2>
-        <span>Скидка 10% для друзей из социальных сетей.</span>
+      <div class="container clearfix">
+        <div class="social-footer">
+          <a class="social-btn" href="#">Вконтакте</a>
+          <a class="social-btn" href="#">Фейсбук</a>
+          <a class="social-btn" href="#">Инстаграм</a>
+        </div>
+        <div class="lets-friend">
+          <h2>Давайте дружить, это выгодно!</h2>
+          <span>Скидка 10% для друзей из социальных сетей.</span>
+        </div>
       </div>
     </footer>
 

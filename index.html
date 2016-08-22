@@ -6,9 +6,10 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
+
     <header class="header">
-      <div class="container">
-        <a href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
+      <div class="container clearfix">
+        <a href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
         <nav class="header-menu">
           <ul>
             <li>
@@ -24,57 +25,60 @@
               <a href="#">КОНТАКТЫ</a>
             </li>
           </ul>
-        </nav>
+        </nav> <!-- margin-left-->
         <div class="cart">
-        <a href="#">КОРЗИНА</a>
-      </div>
+          <a href="#">КОРЗИНА</a>
+        </div>
+
+        <!--Слайдер-->
+        <div class="advantages clearfix">
+          <div class="advantages-text">
+            <h1>Долго, дорого, скрупулезно.</h1>
+            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+            <a class="btn-more" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          </div>
+          <div class="advantages-img">
+            <img src="img/Nerds-comp.png" alt="Nerds" width="338" height="231">
+          </div>
+        </div>
       </div>
     </header>
-    <main class="index">
-      <!--Слайдер-->
-      <div class="advantages">
-        <div class="advantages-text">
-          <h2>Долго, дорого, скрупулезно.</h2>
-          <span>Математически выверенный дизайн для вашего сайта или мобильного приложения</span>
-          <a class="btn-more" href="#">УЗНАТЬ БОЛЬШЕ</a>
-        </div>
-        <div class="advantages-img">
-          <img src="img/Nerds-comp.png" alt="Nerds" width="338" height="231">
-        </div>
-      </div>
+
+    <main class="container clearfix">
+
       <!--div с плюсами-->
       <div class="what-we-do">
         <div class="we-do-card">
           <img src="img/web-sites.png" alt="web" width="240" height="124">
-          <span>Веб-сайты</span>
+          <h2>Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a href="#" class="btn-buy">Заказать</a>
         </div>
         <div class="we-do-card">
           <img src="img/apps.png" alt="apps" width="240" height="124">
-          <span>Приложения</span>
+          <h2>Приложения</h2>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
           <a href="#" class="btn-buy">Заказать</a>
         </div>
         <div class="we-do-card">
           <img src="img/present.png" alt="present" width="240" height="124">
-          <span>Презентации</span>
+          <h2>Презентации</h2>
           <p>ПРЕЗЕНТАЦИИ</b><p>Вы даже не подозреваете, насколько вы изумительны!</p>
           <a href="#" class="btn-buy">Заказать</a>
         </div>
       </div>
-      <hr>
+      <hr class="delimiter-center"> <!-- delimiter body and partners-->
       <!--Рассказ о nerds-->
-      <div class="about">
+      <div class="about clearfix">
         <div class="about-text">
-          <h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <p><b>Мы - маленькая, но гордая дизайн-студия из Краснодара.</b></p>
           <p>Исповедуем принципы минимализма и чистоты. Ставим Математический расчет выше креатива. Работаем не покладая рук, как роботы.</p>
           <span>Выполняем заказы на разработку:</span>
           <ul>
-            <li>Веб-сайтов любой сложности</li>
-            <li>Мобильных приложений для iOS и Android</li>
-            <li>Слайдшоу и видео для корпоративных презентаций</li>
-          </ul>
+              <li>Веб-сайтов любой сложности</li>
+              <li>Мобильных приложений для iOS и Android</li>
+              <li>Слайдшоу и видео для корпоративных презентаций</li>
+            </ul>
         </div>
         <div class="about-how">
           <img src="img/Logo-big.png" alt="nerds" width="240" height="119">
@@ -86,38 +90,39 @@
           </ul>
         </div>
       </div>
-      <hr>
-      <div class="image-partners">
-        <img src="img/partn-gluhanko.png" alt="GLUKHANKO" width="198" height="37">
-        <img src="img/partn-academy.png" alt="html academy" width="199" height="68">
-        <img src="img/partn-borod.png" alt="Barbershop" width="209" height="90">
+      <hr class="delimiter-partners">
+      <div class="partners">
+        <img src="img/partn-gluhanko.png" alt="GLUKHANKO" width="198" height="37" class="image-partners">
+        <img src="img/partn-academy.png" alt="html academy" width="199" height="68" class="image-partners">
+        <img src="img/partn-borod.png" alt="Barbershop" width="209" height="90" class="image-partners">
       </div>
-      <hr>
-
+      <hr class="delimiter-partners">
     </main><!--index div-->
-      <div class="map">
-        <img src="img/map.jpg" alt="map" width="1199" height="416">
-        <img src="img/logo-map.png" alt="logo-map" width="92" height="37">
-        <div class="our-address">
-          <b>NЁRDS DESIGN STUDIO</b>
-
-          <address>
-            191186, Санкт-Петербург,...
-            <br>
-            тел. +7 (812) 275-75-75
-          </address>
-          <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
-        </div>
-      </div>
       <footer class="social">
-        <div class="social-footer">
-          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <div class="map">
+          <img src="img/map.jpg" alt="map" width="1199" height="416">
+          <img src="img/logo-map.png" alt="logo-map" width="92" height="37">
+          <div class="our-address">
+            <b>NЁRDS DESIGN STUDIO</b>
+
+            <address>
+              191186, Санкт-Петербург,...
+              <br>
+              тел. +7 (812) 275-75-75
+            </address>
+            <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
+          </div>
         </div>
-        <div class="lets-friend">
-          <h2>Давайте дружить, это выгодно!</h2>
-          <span>Скидка 10% для друзей из социальных сетей.</span>
+        <div class="container clearfix">
+          <div class="social-footer">
+            <a class="social-btn" href="#">Вконтакте</a>
+            <a class="social-btn" href="#">Фейсбук</a>
+            <a class="social-btn" href="#">Инстаграм</a>
+          </div>
+          <div class="lets-friend">
+            <h2>Давайте дружить, это выгодно!</h2>
+            <span>Скидка 10% для друзей из социальных сетей.</span>
+          </div>
         </div>
       </footer>
 

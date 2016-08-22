@@ -15,9 +15,169 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 30px;
   color: black;
   font-weight: 500;
   font-family: "Roboto";
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  width: 880px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 60px;
+  background-color: grey;
+}
+
+.header-menu {
+  width: 780px;
+  float: left;
+}
+
+.cart {
+  float: right;
+}
+
+.advantages {
+  vertical-align: top;
+}
+
+.advantages-text {
+  float: left;
+  width: 370px;
+  padding-top: 25px:
+}
+
+.advantages-img {
+  float: right;
+  margin-bottom: 70px;
+}
+
+.what-we-do {
+
+}
+
+.we-do-card {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  margin-right: 80px;
+  margin-bottom: 80px;
+}
+
+.we-do-card:last-child {
+  width: 232px;     /*Последняя карта вышла не 240px, а 232. Семь пикселей непонятно откуда вылезают */
+  margin-right: 0;
+}
+
+.about {
+  margin-bottom: 72px;
+}
+
+.about-text {
+  float: left;
+  width: 575px;
+  padding-top: 15px;
+}
+
+.about-how {
+  width: 225px;
+  float: right;
+  margin-right: 15px;
+}
+
+.about-how img {
+  margin-bottom: 75px;
+}
+
+.delimiter-center {
+  margin-bottom: 60px;
+}
+
+.delimiter-partners {
+  margin-bottom: 45px;
+}
+
+.image-partners {
+  vertical-align: middle;
+  margin-right: 120px;
+  margin-bottom: 45px;
+}
+
+.image-partners:last-child {
+  margin-right: 0;
+}
+
+.our-address {
+  background-color: red; /*увидеть где он */
+  width: 250px;
+  height: 240px;
+  float: left;
+}
+
+.social {
+  margin-top: 80px;
+}
+
+.social-footer {
+  float: left;
+}
+
+.social-btn {
+  margin-right: 28px;
+}
+
+.lets-friend {
+  float: left;
+  margin-left: 80px;
+}
+
+footer .container {
+  margin-top: 80px;
+}
+
+/*Catalog*/
+
+.welcome {
+  margin-top: 75px;
+  margin-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left-menu {
+  float: left;
+  width: 245px;
+}
+
+.left-menu input {
+  width: 80px;
+}
+
+.sorted {
+  margin-bottom: 26px;
+}
+
+.layout-card {
+  display: inline-block;
+  margin-right: 80px;
+  margin-bottom: 80px;
+}
+
+.layout-card:nth-child(even) {
+  margin-right: 0;
+}
+
+.card-description {
+  float: right;
 }
