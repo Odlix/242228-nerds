@@ -36,7 +36,7 @@ h2 {
 
 .header {
   margin-bottom: 60px;
-  background-color: grey;
+  background-color: #eeeeee;
 }
 
 .header-menu {
@@ -50,17 +50,26 @@ h2 {
 
 .advantages {
   vertical-align: top;
+
 }
 
 .advantages-text {
   float: left;
   width: 370px;
   padding-top: 25px:
+
 }
 
 .advantages-img {
   float: right;
   margin-bottom: 70px;
+}
+
+.advantages-switch {   
+  float: left;
+  width: 60px;
+  margin-top: 200px;
+
 }
 
 .what-we-do {
@@ -76,11 +85,11 @@ h2 {
 }
 
 .we-do-card:last-child {
-  width: 232px;     /*Последняя карта вышла не 240px, а 232. Семь пикселей непонятно откуда вылезают */
-  margin-right: 0;
+  width: 232px;
 }
 
 .about {
+  margin-top: 60px;
   margin-bottom: 72px;
 }
 
@@ -100,18 +109,19 @@ h2 {
   margin-bottom: 75px;
 }
 
-.delimiter-center {
-  margin-bottom: 60px;
+.delimiter {
+  margin: 0;
 }
 
-.delimiter-partners {
-  margin-bottom: 45px;
+.partners {
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
 
 .image-partners {
   vertical-align: middle;
   margin-right: 120px;
-  margin-bottom: 45px;
+
 }
 
 .image-partners:last-child {
@@ -168,8 +178,13 @@ footer .container {
   margin-bottom: 26px;
 }
 
+.layouts {
+  margin-left: 246px;
+}
+
 .layout-card {
   display: inline-block;
+  font-size: 0;
   margin-right: 80px;
   margin-bottom: 80px;
 }
@@ -178,6 +193,29 @@ footer .container {
   margin-right: 0;
 }
 
-.card-description {
-  float: right;
+.showed  div{
+  position: relative;
 }
+
+.btn-price {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  background: red;
+  width: 140px;
+  height: 40px;
+
+}
+
+.btn-price:hover {
+  background: blue;
+}
+
+/*
+.btn-price {
+  display: inline-block;
+  float: right;
+  background: red;
+  width: 100px;
+}
+*/
