@@ -65,7 +65,7 @@ h2 {
   margin-bottom: 70px;
 }
 
-.advantages-switch {   
+.advantages-switch {
   float: left;
   width: 60px;
   margin-top: 200px;
@@ -82,10 +82,12 @@ h2 {
   vertical-align: top;
   margin-right: 80px;
   margin-bottom: 80px;
+  background: red;
 }
 
 .we-do-card:last-child {
-  width: 232px;
+  margin-right: 0;
+
 }
 
 .about {
