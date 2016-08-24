@@ -73,7 +73,7 @@ h2 {
 }
 
 .what-we-do {
-
+  font-size: 0;
 }
 
 .we-do-card {
@@ -82,7 +82,21 @@ h2 {
   vertical-align: top;
   margin-right: 80px;
   margin-bottom: 80px;
-  background: red;
+
+
+  font-size: 15px;
+  line-height: 22px;
+  color: black;
+  font-weight: 500;
+  font-family: "Roboto";
+}
+
+.we-do-card h2 {     /* Не работает? */
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+  font-weight: 500;
+  font-family: "Roboto";
 }
 
 .we-do-card:last-child {
