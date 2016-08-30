@@ -3,7 +3,7 @@ body {
   line-height: 22px;
   color: black;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
   line-height: normal;
   color: black;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
   line-height: 30px;
   color: black;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 .clearfix::after {
@@ -39,14 +39,107 @@ h2 {
   background-color: #eeeeee;
 }
 
-.header-menu {
-  width: 780px;
+.main-logo {
   float: left;
+
+}
+
+.header-menu {
+  box-sizing: border-box;
+  width: 650px;
+  float: left;
+  /*padding-left: 185px;  /* 325px */
+
+}
+
+.header-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.header-menu li {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 62px 46px;
+}
+
+.header-menu a:last-child {
+  padding-right: 0;
+}
+
+.header-menu a:hover {
+  color: #fb565a;
+}
+
+.header-menu a:active {
+  color: #dbdbdb;
 }
 
 .cart {
+  max-width: 90px;
   float: right;
 }
+
+.login {
+  position: relative;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  color: black;
+  text-decoration: none;
+  padding: 62px 0 62px 25px;
+
+  display: inline-block;
+  vertical-align: top;
+}
+
+.login:hover {
+  color: #fb565a;
+}
+
+.login:active {
+  color: #dbdbdb;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+
+  width: 15px;
+  height: 15px;
+  background-position: -10px -10px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+
+  top: 69px;
+  left: 3px;
+}
+
+.login:hover::before {
+  width: 15px;
+  height: 15px;
+  background-position: -10px -45px;
+
+}
+
+.login:active::before {
+  width: 15px;
+  height: 15px;
+  background-position: -10px -10px;
+}
+
+/*--Конец шапки--*/
 
 .advantages {
   vertical-align: top;
@@ -56,9 +149,94 @@ h2 {
 .advantages-text {
   float: left;
   width: 370px;
-  padding-top: 25px:
+  margin: 0;
+  padding: 0;
 
 }
+
+.advantages-text h1 {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.advantages-text p {
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/*BUTTONS */
+
+.btn-more {
+  display: block;
+  /*box-sizing: border-box;*/
+  width: 240px;
+  line-height: 38px;
+
+  text-decoration: none;
+  color: white;
+  background-color: #fb565a;
+  font-size: 12px;
+
+
+  text-align: center;
+
+  /*vertical-align: middle;*/
+  /*padding: 14px 71px 15px 70px;*/
+}
+
+.btn-more:hover {
+  background-color: #d6494d;
+}
+
+.btn-more:active {
+  background-color: #b63538;
+}
+
+.btn-buy {
+  display: block;
+  width: 140px;
+  line-height: 38px;
+
+  text-decoration: none;
+  color: white;
+  background-color: #fb565a;
+
+  text-align: center;
+}
+
+.btn-buy:hover {
+  background-color: #d6494d;
+}
+
+.btn-buy:active {
+  background-color: #b63538;
+}
+
+.apps {
+  background-color: #00ca74;
+}
+
+.apps:hover {
+  background-color: #01a25e;
+}
+
+.apps:active {
+  background-color: #009053;
+}
+
+.present {
+  background-color: #efc84a;
+}
+
+.present:hover {
+  background-color: #d6ae2c;
+}
+.present:active {
+  background-color: #c09b24;
+}
+
+/*END BUTTONS */
 
 .advantages-img {
   float: right;
@@ -88,7 +266,7 @@ h2 {
   line-height: 22px;
   color: black;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 .we-do-card h2 {     /* Не работает? */
@@ -96,7 +274,7 @@ h2 {
   line-height: 30px;
   color: black;
   font-weight: 500;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
 }
 
 .we-do-card:last-child {
@@ -235,3 +413,91 @@ footer .container {
   width: 100px;
 }
 */
+
+
+/*SPRITE*/
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite--icon-basket {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -10px;
+}
+
+.sprite--icon-basket-red {
+    width: 15px;
+    height: 15px;
+    background-position: -10px -45px;
+}
+
+.sprite--icon-check-off {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -80px;
+}
+
+.sprite--icon-check-on {
+    width: 27px;
+    height: 23px;
+    background-position: -10px -123px;
+}
+
+.sprite--icon-circle {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -166px;
+}
+
+.sprite--icon-circle-dot {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -211px;
+}
+
+.sprite--icon-down-dir- {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -256px;
+}
+
+.sprite--icon-down-dir-green {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -286px;
+}
+
+.sprite--icon-fb {
+    width: 12px;
+    height: 22px;
+    background-position: -10px -316px;
+}
+
+.sprite--icon-inst {
+    width: 21px;
+    height: 21px;
+    background-position: -10px -358px;
+}
+
+.sprite--icon-up-dir {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -399px;
+}
+
+.sprite--icon-up-dir-green {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -429px;
+}
+
+.sprite--icon-vk {
+    width: 26px;
+    height: 15px;
+    background-position: -10px -459px;
+}
+
+/*END SPRITE*/

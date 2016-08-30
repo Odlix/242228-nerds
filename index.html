@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru"> <!--Как в строку лого+ меню -->
   <head>
     <meta charset="utf-8">
     <title>Нёрдс Главная страница</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,900&subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,7 +12,7 @@
 
     <header class="header">
       <div class="container clearfix">
-        <a href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
+        <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
         <nav class="header-menu">
           <ul>
             <li>
@@ -28,11 +30,12 @@
           </ul>
         </nav> <!-- margin-left-->
         <div class="cart">
-          <a href="#">КОРЗИНА</a>
+          <a class="login" href="#">КОРЗИНА</a>
         </div>
 
+
         <!--Слайдер-->
-        <div class="advantages clearfix">
+        <div class="advantages clearfix"> <!--Кнопка? line-height?? -->
           <div class="advantages-text">
             <h1>Долго, дорого, скрупулезно.</h1>
             <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
@@ -50,29 +53,30 @@
           </div>
         </div>
       </div>
+
     </header>
 
     <main class="container clearfix">
 
       <!--div с плюсами-->
-      <div class="what-we-do">
+      <div class="what-we-do"> <!--Как покрасить кнопки, только через отдельные классы? -->
         <section class="we-do-card">
-          <img src="img/web-sites.png" alt="web" width="240" height="124">
+          <img src="img/we-do-web-sites.png" alt="web" width="240" height="124">
           <h2>Веб-сайты</h2>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a href="#" class="btn-buy">Заказать</a>
+          <a href="#" class="btn-buy sites">Заказать</a>
         </section>
         <section class="we-do-card">
-          <img src="img/apps.png" alt="apps" width="240" height="124">
+          <img src="img/we-do-apps.png" alt="apps" width="240" height="124">
           <h2>Приложения</h2>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a href="#" class="btn-buy">Заказать</a>
+          <a href="#" class="btn-buy apps">Заказать</a>
         </section>
         <section class="we-do-card">
-          <img src="img/present.png" alt="present" width="240" height="124">
+          <img src="img/we-do-present.png" alt="present" width="240" height="124">
           <h2>Презентации</h2>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a href="#" class="btn-buy">Заказать</a>
+          <a href="#" class="btn-buy present">Заказать</a>
         </section>
       </div>
       <hr class="delimiter"> <!-- delimiter body and partners-->
@@ -118,7 +122,7 @@
               <br>
               тел. +7 (812) 275-75-75
             </address>
-            <a class="btn-more" href="#">НАПИШИТЕ НАМ</a>
+            <a class="btn-address" href="#">НАПИШИТЕ НАМ</a>
           </div>
         </div>
         <div class="container clearfix">
