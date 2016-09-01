@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
   <title>Нёрдс Каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,900&subset=cyrillic">
   <link rel="stylesheet" href="css/normalize.css">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="header clearfix">
     <div class="container clearfix">
-      <a href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
+      <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
       <nav class="header-menu">
         <ul>
           <li>
@@ -28,9 +27,9 @@
             <a href="#">КОНТАКТЫ</a>
           </li>
         </ul>
-      </nav>
+      </nav> <!-- margin-left-->
       <div class="cart">
-        <a href="#">КОРЗИНА</a>
+        <a class="login" href="#">КОРЗИНА</a>
       </div>
       <div class="welcome">
         <h1>ДОБРО ПОЖАЛОВАТЬ В МАГАЗИН ГОТОВЫХ МАКЕТОВ</h1>
@@ -39,7 +38,7 @@
 
   </header>
 
-  <main class="container">
+  <main class="container clearfix">
     <!--Левое меню сортировки-->
     <div class="left-menu">
       <div class="price">
@@ -47,67 +46,47 @@
           <div class="slider">
             <input type="range" name="name" value="">
           </div>
-          <input type="text" name="name" value="0">
-          <input type="text" name="name" value="15000">
+          <input class="price-range" type="text" name="name" value="0">
+          <input class="price-range" type="text" name="name" value="15000">
 
       </div>
       <!--Сетка-->
       <div class="grid">
         <h3>СЕТКА:</h3>
         <form action="#" method="post">
-          <ul>
-            <li>
-              <label>
-                <input type="radio" name="grid" value="Адаптивная">Адаптивная
-              </label>
-            </li>
-            <li>
-              <label>
-                <input checked type="radio" name="grid" value="Фиксированная">Фиксированная
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="radio" name="grid" value="Резиновая">Резиновая
-              </label>
-            </li>
-          </ul>
-        </form>
+          <input type="radio" name="grid" value="Адаптивная" id="rd1">
+          <label for="rd1">Адаптивная</label>
+
+          <input checked type="radio" name="grid" value="Фиксированная" id="rd2">
+          <label for="rd2">Фиксированная</label>
+
+          <input type="radio" name="grid" value="Резиновая" id="rd3">
+          <label for="rd3">Резиновая</label>
+
       </div>
       <!--Особенности-->
       <div class="features">
         <h3>ОСОБЕННОСТИ:</h3>
-        <form action="#" method="post">
-          <ul>
-            <li>
-              <label>
-                <input checked type="checkbox" name="features-check" value="skider">Слайдер
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="features-check" value="advantages">Блок преимуществ
-              </label>
-            </li>
-            <li>
-              <label>
-                <input checked type="checkbox" name="features-check" value="news">Новости
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="features-check" value="galery-features">Галерея
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="features-check" value="basket">Корзина
-              </label>
-            </li>
 
-          </ul>
-          <div class="show-button"> <!--отдельная клавиша Показать-->
-            <a href="#" class="btn-show"><input type="submit" value="Показать"></a>
+          <input checked type="checkbox" name="features-check" value="skider" id="ch1">
+          <label for="ch1">Слайдер</label>
+
+          <input type="checkbox" name="features-check" value="advantages" id="ch2">
+          <label for="ch2">Блок преимуществ</label>
+
+          <input checked type="checkbox" name="features-check" value="news" id="ch3">
+          <label for="ch3">Новости</label>
+
+          <input type="checkbox" name="features-check" value="galery-features" id="ch4">
+          <label for="ch4">Галерея</label>
+
+          <input type="checkbox" name="features-check" value="basket" id="ch5">
+          <label for="ch5">Корзина</label>
+
+        <div class="show-button"> <!--отдельная клавиша Показать-->
+            <!-- <a href="#" class="b1tn-show"> -->
+              <input class="btn-show" type="submit" value="Показать">
+            <!-- </a> -->
           </div>
         </form>
       </div>
@@ -147,7 +126,7 @@
         </div>
         <div class="pagination">
           <ul>
-            <li><a href="#">1</a></li>
+            <li><a href="#" class="selected-pagi">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">Следующая</a></li>
@@ -158,33 +137,34 @@
 
 
   </main><!--index main-->
-    <footer class="social">
+  <footer class="social">
+    <div class="container clearfix">
       <div class="map">
-        <img src="img/map.jpg" alt="map" width="1199" height="416">     <!--!!!! Карта, как в полный размер -->
-        <img src="img/logo-map.png" alt="logo-map" width="92" height="37">
+        <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416">
+        <img class="map-logo" src="img/logo-map.png" alt="logo-map" width="92" height="37">
         <div class="our-address">
-          <b>NЁRDS DESIGN STUDIO</b>
+          <span>NЁRDS DESIGN STUDIO</span>
 
           <address>
-            191186, Санкт-Петербург,...
+            191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             <br>
             тел. +7 (812) 275-75-75
           </address>
-          <a class="btn=more" href="#">НАПИШИТЕ НАМ</a>
-        </div>     <!--Как поставить на место? -->
+          <a class="btn-address" href="#">НАПИШИТЕ НАМ</a>
+        </div>
       </div>
-      <div class="container clearfix">
+
         <div class="social-footer">
-          <a class="social-btn" href="#">Вконтакте</a>
-          <a class="social-btn" href="#">Фейсбук</a>
-          <a class="social-btn" href="#">Инстаграм</a>
+          <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+          <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+          <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
         </div>
         <div class="lets-friend">
-          <h2>Давайте дружить, это выгодно!</h2>
+          <h1>Давайте дружить, это выгодно!</h1>
           <span>Скидка 10% для друзей из социальных сетей.</span>
         </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
 </body>
 </html>
