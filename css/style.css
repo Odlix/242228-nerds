@@ -62,8 +62,11 @@ img {
   margin-top: 43px;
 
   /*margin-bottom: 64px;*/
-  /*padding-left: 185px;  /* 325px */
 
+}
+
+.help-bottom {
+  margin-bottom: 64px;
 }
 
 .header-menu ul {
@@ -161,7 +164,7 @@ img {
   background-repeat: no-repeat;
 
   top: 69px;
-  left: 3px;
+  left: -3px;
 }
 
 .login:hover::before {
@@ -182,7 +185,7 @@ img {
 /* SLIDER*/
 
 .slider {
-  position: relative;
+  /*position: relative;*/
 
   padding-top: 135px;
   width: 880px;
@@ -591,6 +594,10 @@ img {
   background: #fb565a;
 }
 
+.social-btn:active {
+  background: #d6494d;
+}
+
 .social-btn-vk::before {
   width: 26px;
   height: 15px;
@@ -625,29 +632,6 @@ footer .container {
 }
 /*--End Footer--*/
 
-/*Catalog*/
-
-.welcome {
-  margin-bottom: 95px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 655px;
-}
-
-.welcome h1 {
-  margin: 0;
-  text-align: center;
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: 500;
-  line-height: normal;
-}
-
-.left-menu {
-  float: left;
-  width: 245px;
-  line-height: 20px;
-}
 
 /*Оформление кнопок*/
 
@@ -757,12 +741,136 @@ input[type="radio"]:checked + label::after {
   background-position: -10px -211px;
 }
 
-.left-menu .price-range {
-  width: 80px;
+/*END Оформление кнопок*/
+
+
+/*Catalog*/
+
+.welcome {
+  margin-bottom: 95px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 655px;
+}
+
+.welcome h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.left-menu {
+  float: left;
+  width: 245px;
+  line-height: 20px;
+}
+
+/* FILTER*/
+
+.range-filter {
+  width: 240px;
+  margin-bottom: 55px;
+  margin-right: 80px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border-radius: 5px;
+  background: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  background: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+
+  cursor: pointer;
+
+}
+
+.range-controls .toggle-min {
+  left: 20px;
+}
+
+.range-controls .toggle-max {
+  left: 145px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  font-size: 16px;
+
+  display: inline-block;
+  width: 50%;
+}
+
+.max-price {
+  text-align: right;
+}
+
+.price-controls input {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+  width: 60px;
+  margin-left: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #f1f1f1;
+}
+
+/*END FILTER */
+
+
+.grid {
+  margin-bottom: 50px;
 }
 
 .show-button {
   margin-top: 57px;
+}
+
+.left-menu span {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
 }
 
 .btn-show {
@@ -783,28 +891,105 @@ input[type="radio"]:checked + label::after {
 
 }
 
-/*END Оформление кнопок*/
-
-.price {
-  margin-bottom: 55px;
-}
-
-.grid {
-  margin-bottom: 50px;
-}
-
 .cards-index {
   width: 565px;
-  margin-left: 246px;
+  margin-left: 320px;
 }
 
 .sorted {
+  position: relative;;
+  width: 564px;
   margin-bottom: 26px;
 }
 
-/*.layouts {
-  margin-left: 246px;
-}*/
+.sorted span {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+
+  margin-right: 40px;
+}
+
+.sorted a {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  opacity: 0.3;
+  /*text-decoration-style: dotted;*/
+  text-decoration: none;
+  border-bottom: 1px #00ca74 dotted;
+
+  margin-right: 45px;
+}
+
+.sorted a:hover {
+  color: black;
+  opacity: 1;
+  border-bottom: 1px #00ca74 solid
+}
+
+.sorted a:active {
+  border-bottom: 0;
+}
+
+.sorted::after {
+  content: "";
+  position: absolute;
+
+  background-image: url("../img/sprite3.png");
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+
+  width: 28px;
+  height: 10px;
+  background-position: -10px -70px;
+
+  top: 5px;
+  left: 535px;
+}
+
+.sorted:hover::after {
+  width: 28px;
+  height: 10px;
+  background-position: -10px -10px;
+
+}
+
+.sorted:active::after {
+  width: 28px;
+  height: 10px;
+  background-position: -10px -40px;
+}
+
+
+/* little sprite for arrows */
+.sprite3 {
+    background-image: url("../img/sprite3.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-dir-black {
+    width: 28px;
+    height: 10px;
+    background-position: -10px -10px;
+}
+
+.sprite-dir-green {
+    width: 28px;
+    height: 10px;
+    background-position: -10px -40px;
+}
+
+.sprite-dir-grey {
+    width: 28px;
+    height: 10px;
+    background-position: -10px -70px;
+}
+/*END little sprite for arrows */
 
 .layout-card {
   display: inline-block;
@@ -818,11 +1003,25 @@ input[type="radio"]:checked + label::after {
   margin-right: 0;
 }
 
-.showed  div{
+.showed {
   position: relative;
 }
 
-.btn-price {
+.button-price .btn-more {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -70px;
+
+  width: 140px;
+  height: 38px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+/*.btn-price {
   position: absolute;
   bottom: 80px;
   left: 50px;
@@ -834,7 +1033,7 @@ input[type="radio"]:checked + label::after {
 
 .btn-price:hover {
   background: blue;
-}
+}*/
 
 /*
 .btn-price {

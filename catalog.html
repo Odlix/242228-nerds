@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"> <!-- див с карточками отталкивать через margin-left от края на 320px? -->
+<head> <!-- Пришлось для каталога ввести отдельный класс с margin-bottom (help-bottom) -->
   <meta charset="utf-8">
   <title>Нёрдс Каталог</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic" rel="stylesheet">
@@ -12,7 +12,7 @@
   <header class="header clearfix">
     <div class="container clearfix">
       <a class="main-logo" href="index.html" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
-      <nav class="header-menu">
+      <nav class="header-menu help-bottom">
         <ul>
           <li>
             <a href="#">СТУДИЯ</a>
@@ -41,19 +41,29 @@
   <main class="container clearfix">
     <!--Левое меню сортировки-->
     <div class="left-menu">
-        <div class="price">
+      <form action="#" method="post">
+        <div class="range-filter">
           <span>Стоимость</span>
-            <div class="slider">
-              <input type="range" name="name" value="">
+            <div class="range-controls">
+              <!-- <input type="range" name="name" value=""> -->
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+
             </div>
-            <input class="price-range" type="text" name="name" value="0">
-            <input class="price-range" type="text" name="name" value="15000">
+            <div class="price-controls">
+              <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+              <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+            </div>
+            <!-- <input class="price-controls" type="text" name="name" value="0">
+            <input class="price-controls" type="text" name="name" value="15000"> -->
 
         </div>
         <!--Сетка-->
-        <div class="grid">  <!--form action закрывать в каждом диве или один общий на два дива?(этот и следующий)-->
-          <h3>СЕТКА:</h3>
-          <form action="#" method="post">
+        <div class="grid">
+          <span>СЕТКА:</span>
             <input type="radio" name="grid" value="Адаптивная" id="rd1">
             <label for="rd1">Адаптивная</label>
 
@@ -66,7 +76,7 @@
         </div>
         <!--Особенности-->
         <div class="features">
-          <h3>ОСОБЕННОСТИ:</h3>
+          <span>ОСОБЕННОСТИ:</span>
 
             <input checked type="checkbox" name="features-check" value="skider" id="ch1">
             <label for="ch1">Слайдер</label>
@@ -88,19 +98,17 @@
                 <input class="btn-show" type="submit" value="Показать">
               <!-- </a> -->
             </div>
-          </form>
-        </div>
 
-      </div>
+        </div>
+      </form>
+    </div>
     <!--Карточки-->
     <div class="cards-index"> <!--Сортировка?-->
       <div class="sorted">
-        <b>СОРТИРОВАТЬ:</b>
+        <span>СОРТИРОВАТЬ:</span>
         <a href="#">ПО ЦЕНЕ</a>
         <a href="#">ПО ТИПУ</a>
         <a href="#">ПО ФУНКЦИОНАЛУ</a>
-        <span>▼</span>
-        <span>▲</span>
       </div>
       <div class="layouts">
         <div class="layout-card">
@@ -109,7 +117,7 @@
         <div class="layout-card showed"> <!--карточка с кнопкой-->
             <a href="#"><img src="img/card-2-2.jpg" alt="Макет" width="240" height="270"></a>
             <div class="button-price">
-                <a href="#" class="btn-price">10000 Р.</a>
+                <a href="#" class="btn-more">10000 Р.</a>
             </div>
         </div>
         <div class="layout-card">
