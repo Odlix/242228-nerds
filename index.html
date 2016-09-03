@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="ru"> <!--Как в строку лого+ меню -->
-  <head>
+<html lang="ru">  <!-- горизонтальная прокрутка от .container margin 0 10px, как убрать? -->
+  <head>  <!-- В index.html меню перестало быть активным из-за слайдера -->
     <meta charset="utf-8">
     <title>Нёрдс Главная страница</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic" rel="stylesheet">
@@ -10,10 +10,10 @@
   </head>
   <body>
 
-    <header class="header">
+    <header class="header clearfix">
       <div class="container clearfix">
         <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
-        <nav class="header-menu">
+        <nav class="header-menu clearfix">
           <ul>
             <li>
               <a href="#">СТУДИЯ</a>
@@ -22,7 +22,7 @@
               <a href="#">КЛИЕНТЫ</a>
             </li>
             <li>
-              <a href="#">МАГАЗИНТ</a>
+              <a href="Catalog.html">МАГАЗИН</a>
             </li>
             <li>
               <a href="#">КОНТАКТЫ</a>
@@ -32,24 +32,39 @@
         <div class="cart">
           <a class="login" href="#">КОРЗИНА</a>
         </div>
-
-
         <!--Слайдер-->
-        <div class="advantages clearfix"> <!--Кнопка? line-height?? -->
-          <div class="advantages-text">
-            <h1>Долго, дорого, скрупулезно.</h1>
-            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-            <a class="btn-more" href="#">УЗНАТЬ БОЛЬШЕ</a>
-          </div>
-          <div class="advantages-switch">
-            <!-- <img src="img/4-layers.png" alt="Переключатели"> -->
-            <span class="switch-btn"><img src="img/sw-bt-2.png" alt="" /></span>
-            <span class="switch-btn"><img src="img/sw-bt.png" alt="" /></span>
-            <span class="switch-btn"><img src="img/sw-bt.png" alt="" /></span>
+        <div class="slider">
+          <input type="radio" id="btn-1" name="toggle" checked>
+          <input type="radio" id="btn-2" name="toggle">
+          <input type="radio" id="btn-3" name="toggle">
 
+          <div class="slider-controls">
+            <label for="btn-1"></label>
+            <label for="btn-2"></label>
+            <label for="btn-3"></label>
           </div>
-          <div class="advantages-img">
-            <img src="img/Nerds-comp.png" alt="Nerds" width="338" height="231">
+          <div class="slides">
+            <div class="slide">
+              <div class="slide-text">
+                <div class="slide-title">Долго, дорого,<br>скрупулезно</div>
+                <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
+                <a class="btn-more" href="#">Узнать больше</a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-text">
+                <div class="slide-title">Любите ли вы математику,<br> как любим ее мы?</div>
+                <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br>за креатив, чтобы дать им возможность все просчитать.</p>
+                <a class="btn-more" href="#">Узнать больше</a>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-text">
+                <div class="slide-title">Только наркотики,<br> только хардкор!</div>
+                <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов.</p>
+                <a class="btn-more" href="#">Узнать больше</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -112,7 +127,7 @@
     </main><!--index div-->
       <footer class="social">
         <div class="container clearfix">
-          <div class="map">
+          <div class="map"> <!--Всплывающее окно внутри -->
             <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416">
             <img class="map-logo" src="img/logo-map.png" alt="logo-map" width="92" height="37">
             <div class="our-address">
@@ -125,6 +140,41 @@
               </address>
               <a class="btn-address" href="#">НАПИШИТЕ НАМ</a>
             </div>
+            <div class="modal-content clearfix"><!-- Всплывающее окно "Напишите нам" -->  <!-- text-popup проходит сквозь float, clearfix не помогает почему-то -->
+                <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+                <form class="login-form clearfix" action="#" method="post">
+                    <div class="login-popup">
+                      <label for="pup-login">
+                        <p>Ваше имя:</p>
+                      </label>
+                      <input type="text" name="login" id="pup-login" placeholder="представьтесь, пожалуйста">
+                    </div>
+                    <div class="email-popup">
+                      <label for="pup-email">
+                        <p>Ваш e-mail:</p>
+                      </label>
+                      <input type="text"  name="email" id="pup-email" placeholder="для отправки ответа">
+                    </div>
+                    <div class="text-popup">
+                      <label for="pup-text">
+                        <p>Текст письма:</p>
+                      </label>
+                      <textarea type="text"  name="all-text" id="pup-text">в свободной форме</textarea>
+                    </div>
+                    <!-- <div class="text-popup"> -->  <!-- Проба с типом input -->
+                      <!--<label for="pup-text">
+                        <p>Текст письма:</p>
+                      </label>
+                      <input class="popup-text" type="text"  name="all-text" id="pup-text" placeholder="в свободной форме"></input>
+                    </div> -->
+
+                    <button class="btn-show" type="submit">Отправить</button>
+
+                </form>
+
+
+              </div>
           </div>
 
             <div class="social-footer">

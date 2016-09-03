@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <title>Нёрдс Каталог</title>
@@ -11,7 +11,7 @@
 <body>
   <header class="header clearfix">
     <div class="container clearfix">
-      <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
+      <a class="main-logo" href="index.html" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
       <nav class="header-menu">
         <ul>
           <li>
@@ -20,8 +20,8 @@
           <li>
             <a href="#">КЛИЕНТЫ</a>
           </li>
-          <li>
-            <a href="#">МАГАЗИНТ</a>
+          <li class="active">
+            <a>МАГАЗИН</a>
           </li>
           <li>
             <a href="#">КОНТАКТЫ</a>
@@ -41,57 +41,57 @@
   <main class="container clearfix">
     <!--Левое меню сортировки-->
     <div class="left-menu">
-      <div class="price">
-        <span>Стоимость</span>
-          <div class="slider">
-            <input type="range" name="name" value="">
-          </div>
-          <input class="price-range" type="text" name="name" value="0">
-          <input class="price-range" type="text" name="name" value="15000">
+        <div class="price">
+          <span>Стоимость</span>
+            <div class="slider">
+              <input type="range" name="name" value="">
+            </div>
+            <input class="price-range" type="text" name="name" value="0">
+            <input class="price-range" type="text" name="name" value="15000">
+
+        </div>
+        <!--Сетка-->
+        <div class="grid">  <!--form action закрывать в каждом диве или один общий на два дива?(этот и следующий)-->
+          <h3>СЕТКА:</h3>
+          <form action="#" method="post">
+            <input type="radio" name="grid" value="Адаптивная" id="rd1">
+            <label for="rd1">Адаптивная</label>
+
+            <input checked type="radio" name="grid" value="Фиксированная" id="rd2">
+            <label for="rd2">Фиксированная</label>
+
+            <input type="radio" name="grid" value="Резиновая" id="rd3">
+            <label for="rd3">Резиновая</label>
+
+        </div>
+        <!--Особенности-->
+        <div class="features">
+          <h3>ОСОБЕННОСТИ:</h3>
+
+            <input checked type="checkbox" name="features-check" value="skider" id="ch1">
+            <label for="ch1">Слайдер</label>
+
+            <input type="checkbox" name="features-check" value="advantages" id="ch2">
+            <label for="ch2">Блок преимуществ</label>
+
+            <input checked type="checkbox" name="features-check" value="news" id="ch3">
+            <label for="ch3">Новости</label>
+
+            <input type="checkbox" name="features-check" value="galery-features" id="ch4">
+            <label for="ch4">Галерея</label>
+
+            <input type="checkbox" name="features-check" value="basket" id="ch5">
+            <label for="ch5">Корзина</label>
+
+          <div class="show-button"> <!--отдельная клавиша Показать-->
+              <!-- <a href="#" class="b1tn-show"> -->
+                <input class="btn-show" type="submit" value="Показать">
+              <!-- </a> -->
+            </div>
+          </form>
+        </div>
 
       </div>
-      <!--Сетка-->
-      <div class="grid">
-        <h3>СЕТКА:</h3>
-        <form action="#" method="post">
-          <input type="radio" name="grid" value="Адаптивная" id="rd1">
-          <label for="rd1">Адаптивная</label>
-
-          <input checked type="radio" name="grid" value="Фиксированная" id="rd2">
-          <label for="rd2">Фиксированная</label>
-
-          <input type="radio" name="grid" value="Резиновая" id="rd3">
-          <label for="rd3">Резиновая</label>
-
-      </div>
-      <!--Особенности-->
-      <div class="features">
-        <h3>ОСОБЕННОСТИ:</h3>
-
-          <input checked type="checkbox" name="features-check" value="skider" id="ch1">
-          <label for="ch1">Слайдер</label>
-
-          <input type="checkbox" name="features-check" value="advantages" id="ch2">
-          <label for="ch2">Блок преимуществ</label>
-
-          <input checked type="checkbox" name="features-check" value="news" id="ch3">
-          <label for="ch3">Новости</label>
-
-          <input type="checkbox" name="features-check" value="galery-features" id="ch4">
-          <label for="ch4">Галерея</label>
-
-          <input type="checkbox" name="features-check" value="basket" id="ch5">
-          <label for="ch5">Корзина</label>
-
-        <div class="show-button"> <!--отдельная клавиша Показать-->
-            <!-- <a href="#" class="b1tn-show"> -->
-              <input class="btn-show" type="submit" value="Показать">
-            <!-- </a> -->
-          </div>
-        </form>
-      </div>
-
-    </div>
     <!--Карточки-->
     <div class="cards-index"> <!--Сортировка?-->
       <div class="sorted">
@@ -139,7 +139,7 @@
   </main><!--index main-->
   <footer class="social">
     <div class="container clearfix">
-      <div class="map">
+      <div class="map"> <!--Всплывающее окно внутри -->
         <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416">
         <img class="map-logo" src="img/logo-map.png" alt="logo-map" width="92" height="37">
         <div class="our-address">
@@ -152,6 +152,41 @@
           </address>
           <a class="btn-address" href="#">НАПИШИТЕ НАМ</a>
         </div>
+        <div class="modal-content clearfix"><!-- Всплывающее окно "Напишите нам" -->  <!-- text-popup проходит сквозь float, clearfix не помогает почему-то -->
+            <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+
+            <form class="login-form clearfix" action="#" method="post">
+                <div class="login-popup">
+                  <label for="pup-login">
+                    <p>Ваше имя:</p>
+                  </label>
+                  <input type="text" name="login" id="pup-login" placeholder="представьтесь, пожалуйста">
+                </div>
+                <div class="email-popup">
+                  <label for="pup-email">
+                    <p>Ваш e-mail:</p>
+                  </label>
+                  <input type="text"  name="email" id="pup-email" placeholder="для отправки ответа">
+                </div>
+                <div class="text-popup">
+                  <label for="pup-text">
+                    <p>Текст письма:</p>
+                  </label>
+                  <textarea type="text"  name="all-text" id="pup-text">в свободной форме</textarea>
+                </div>
+                <!-- <div class="text-popup"> -->  <!-- Проба с типом input -->
+                  <!--<label for="pup-text">
+                    <p>Текст письма:</p>
+                  </label>
+                  <input class="popup-text" type="text"  name="all-text" id="pup-text" placeholder="в свободной форме"></input>
+                </div> -->
+
+                <button class="btn-show" type="submit">Отправить</button>
+
+            </form>
+
+
+          </div>
       </div>
 
         <div class="social-footer">
@@ -165,6 +200,7 @@
         </div>
     </div>
   </footer>
+
 
 </body>
 </html>

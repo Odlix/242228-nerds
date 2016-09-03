@@ -36,6 +36,11 @@ h2 {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .header {
   margin-bottom: 60px;
   background-color: #eeeeee;
@@ -45,13 +50,18 @@ h2 {
   float: left;
   position: absolute;
   top: 27px;
+  left: 0px;
+
 }
 
 .header-menu {
   box-sizing: border-box;
-  width: 600px;
+  width: 550px;
   float: left;
   margin-left: 180px;
+  margin-top: 43px;
+
+  /*margin-bottom: 64px;*/
   /*padding-left: 185px;  /* 325px */
 
 }
@@ -65,6 +75,7 @@ h2 {
 
 .header-menu li {
   display: inline-block;
+  vertical-align: top;
   font-size: 14px;
   font-weight: 500;
   line-height: 30px;
@@ -74,7 +85,7 @@ h2 {
   text-decoration: none;
   color: black;
   display: block;
-  padding: 62px 46px;
+  padding: 20px 46px;
 }
 
 .header-menu a:last-child {
@@ -89,9 +100,32 @@ h2 {
   color: #dbdbdb;
 }
 
+.header-menu .active {
+  position: relative;
+
+  background-color: none;
+}
+
+.header-menu .active::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 46px;
+
+  height: 5px;
+
+  background-color: #ffffff;
+}
+
+.header-menu .active a:hover {
+  color: black;
+}
+
 .cart {
   max-width: 90px;
   float: right;
+  margin-right: 50px;
 }
 
 .login {
@@ -145,29 +179,104 @@ h2 {
 
 /*--Конец шапки--*/
 
-.advantages {
+/* SLIDER*/
+
+.slider {
+  position: relative;
+
+  padding-top: 135px;
+  width: 880px;
+  margin: 0 auto;
+}
+
+.slide {
+  min-height: 310px;
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+
   vertical-align: top;
 
+  background: #ffffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-controls {
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+
+  width: 200px;
+  margin-left: -100px;
+
+  text-align: center;
 }
 
-.advantages-text {
-  float: left;
-  width: 370px;
-  margin: 0;
-  padding: 0;
-
+.slide-text {
+  width: 500px;
+  padding: 30px 0;
 }
 
-.advantages-text h1 {
-  margin: 0;
-  margin-top: 25px;
+.slide-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 36px;
 }
 
-.advantages-text p {
-  margin: 0;
-  margin-top: 20px;
-  margin-bottom: 30px;
+.slide p {
+  color: #283136;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
 }
+
+.slide:nth-child(1) {
+  background-image: url("../img/nerds-1-comp.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../img/nerds-2-calc.png");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../img/nerds-3-rob.png");
+}
+
+.slide {
+  display: none;
+}
+
+#btn-1:checked ~ .slides .slide:nth-child(1) {
+  display: block;
+}
+
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+  display: block;
+}
+
+#btn-3:checked ~ .slides .slide:nth-child(3) {
+  display: block;
+}
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background: #c1c1c1;
+}
+
+/*END SLIDER */
+
 
 /*BUTTONS */
 
@@ -178,12 +287,13 @@ h2 {
   line-height: 38px;
 
   text-decoration: none;
+  text-transform: uppercase;
   color: white;
   background-color: #fb565a;
   font-size: 12px;
 
-
   text-align: center;
+  border-radius: 3px;
 
   /*vertical-align: middle;*/
   /*padding: 14px 71px 15px 70px;*/
@@ -289,14 +399,38 @@ h2 {
 .about {
   margin-top: 60px;
   margin-bottom: 72px;
+
+}
+
+.about ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 30px;
 }
 
 .about li {
+  position: relative;
+
   margin-bottom: 35px;
+  padding-left: 35px;
+}
+
+.about li::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 1px;
+
+  width: 25px;
+  height: 2px;
+
+  background-color: #fb565a;
 }
 
 .about span {
   text-transform: uppercase;
+
 }
 
 .about-text {
@@ -355,6 +489,7 @@ h2 {
 .big-map {
   position: relative;
   left: -220px;
+  max-width: inherit;
 }
 
 .map-logo {
@@ -650,18 +785,30 @@ input[type="radio"]:checked + label::after {
 
 /*END Оформление кнопок*/
 
+.price {
+  margin-bottom: 55px;
+}
 
+.grid {
+  margin-bottom: 50px;
+}
+
+.cards-index {
+  width: 565px;
+  margin-left: 246px;
+}
 
 .sorted {
   margin-bottom: 26px;
 }
 
-.layouts {
+/*.layouts {
   margin-left: 246px;
-}
+}*/
 
 .layout-card {
   display: inline-block;
+  vertical-align: top;
   font-size: 0;
   margin-right: 80px;
   margin-bottom: 80px;
@@ -712,6 +859,7 @@ input[type="radio"]:checked + label::after {
 
 .pagination li {
   display: inline-block;
+  vertical-align: top;
   font-size: 14px;
   line-height: 18px;
   vertical-align: top;
@@ -828,3 +976,136 @@ input[type="radio"]:checked + label::after {
 }
 
 /*END SPRITE*/
+
+
+/*POPUP*/
+
+.modal-content {
+  position: absolute;
+  bottom: 250px;
+  left: 70px;
+  box-sizing: border-box;
+  /*left: 50%;*/
+
+  max-width: 704px;
+  padding: 55px 90px 50px 80px;
+
+  color: #000000;
+
+  background: white;
+  box-shadow: 0 10px 40px rgba(0, 1, 1, 0.75);
+}
+
+.modal-content p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  width: 41px;
+  height: 41px;
+
+  font-size: 0;
+  border-radius: 50%;
+
+  background-color: #fb565a;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 8px;
+
+  width: 25px;
+  height: 5px;
+  background-color: white;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 220px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  color: black;
+  padding-left: 15px;
+}
+
+/*.login-form .popup-text {
+  width: 460px;
+  height: 115px;
+  padding-top: 12px;
+  padding-left: 16px
+}*/
+
+.login-form textarea {
+
+  box-sizing: border-box;
+  width: 460px;
+  height: 115px;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+
+.login-form label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.login-popup {
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 25px;
+}
+
+.email-popup {
+  display: inline-block;
+  float: right;
+  margin-bottom: 25px;
+}
+
+.text-popup {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.modal-content .btn-show {
+  width: 100%;
+  background: #fb565a;
+  color: white;
+}
+
+.modal-content .btn-show:hover {
+  background-color: #d6494d;
+}
+
+.modal-content .btn-show:active {
+  background-color: #b63538;
+}
+
+/*END popup*/
