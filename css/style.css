@@ -22,6 +22,10 @@ h2 {
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  color: #283136;
+}
+
 .clearfix::after {
   content: "";
   display: table;
@@ -42,7 +46,7 @@ img {
 }
 
 .header {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   background-color: #eeeeee;
 }
 
@@ -50,16 +54,16 @@ img {
   float: left;
   position: absolute;
   top: 27px;
-  left: 0px;
+  left: 10px;
 
 }
 
 .header-menu {
   box-sizing: border-box;
-  width: 550px;
+  max-width: 550px;
   float: left;
-  margin-left: 180px;
-  margin-top: 43px;
+  margin-left: 275px;
+  margin-top: 35px;
 
   /*margin-bottom: 64px;*/
 
@@ -128,7 +132,8 @@ img {
 .cart {
   max-width: 90px;
   float: right;
-  margin-right: 50px;
+  margin-right: 0px;
+  margin-top: -8px;
 }
 
 .login {
@@ -187,7 +192,7 @@ img {
 .slider {
   /*position: relative;*/
 
-  padding-top: 135px;
+  padding-top: 128px;
   width: 880px;
   margin: 0 auto;
 }
@@ -217,7 +222,7 @@ img {
 }
 .slider-controls {
   position: absolute;
-  bottom: 95px;
+  bottom: 85px;
   left: 50%;
 
   width: 200px;
@@ -242,6 +247,7 @@ img {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
+  margin-bottom: 25px;
 }
 
 .slide:nth-child(1) {
@@ -392,6 +398,11 @@ img {
   color: black;
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.we-do-card p {
+  margin-bottom: 25px;
 }
 
 .we-do-card:last-child {
@@ -401,7 +412,7 @@ img {
 
 .about {
   margin-top: 60px;
-  margin-bottom: 72px;
+  margin-bottom: 45px;
 
 }
 
@@ -409,13 +420,13 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .about li {
   position: relative;
 
-  margin-bottom: 35px;
+  margin-bottom: 23px;
   padding-left: 35px;
 }
 
@@ -439,7 +450,7 @@ img {
 .about-text {
   float: left;
   width: 575px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .about-text h1 {
@@ -447,18 +458,18 @@ img {
 }
 
 .about-text p {
-  margin-top: 30px;
-  margin-bottom: 55px;
+  margin-top: 18px;
+  margin-bottom: 45px;
 }
 
 .about-how {
   width: 240px;
   float: right;
-  margin-right: 15px;
+
 }
 
 .about-how img {
-  margin-bottom: 90px;
+  margin-bottom: 62px;
 }
 
 .delimiter {
@@ -466,8 +477,9 @@ img {
 }
 
 .partners {
-  margin-top: 45px;
+  margin-top: 43px;
   margin-bottom: 30px;
+  margin-left: 10px;
 }
 
 .image-partners {
@@ -505,8 +517,8 @@ img {
 
 .our-address {
   position: absolute;
-  top: 85px;
-  right: 700px;
+  top: 90px;
+  right: 865px;
   box-sizing: border-box;
 
   background-color: white;
@@ -524,12 +536,24 @@ img {
 
 .our-address address {
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   font-size: 16px;
   line-height: 20px;
   font-style: normal;
   color: #666;
+}
+
+.our-address .telephone {
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.our-address .btn-address {
+  margin-top: 30px;
 }
 
 .btn-address {
@@ -620,13 +644,13 @@ img {
 
 .lets-friend {
   float: right;;
-  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 75px;
 }
 
 .lets-friend h1 {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 footer .container {
@@ -1210,9 +1234,9 @@ input[type="radio"]:checked + label::after {
 .modal-content {
   display: none;
   position: absolute;
-  bottom: 30px;
+  bottom: -20px;
   left: 50%;
-  margin-left: -250px;
+  margin-left: -325px;
   box-sizing: border-box;
   /*left: 50%;*/
 
@@ -1347,3 +1371,8 @@ input[type="radio"]:checked + label::after {
 }
 
 /*END popup*/
+
+.hoverimg-aviator:hover {
+  content:url("../img/card-1-hover.jpg")
+  z-index: 30;
+}
