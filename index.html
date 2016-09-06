@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">  <!-- горизонтальная прокрутка от .container margin 0 10px, как убрать? -->
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Нёрдс Главная страница</title>
@@ -12,7 +12,7 @@
 
     <header class="header clearfix">
       <div class="container clearfix">
-        <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a> <!--float left-->
+        <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
         <nav class="header-menu clearfix">
           <ul>
             <li>
@@ -28,7 +28,7 @@
               <a href="#">КОНТАКТЫ</a>
             </li>
           </ul>
-        </nav> <!-- margin-left-->
+        </nav>
         <div class="cart">
           <a class="login" href="#">КОРЗИНА</a>
         </div>
@@ -74,7 +74,7 @@
     <main class="container clearfix">
 
       <!--div с плюсами-->
-      <div class="what-we-do"> <!--Как покрасить кнопки, только через отдельные классы? -->
+      <div class="what-we-do">
         <section class="we-do-card">
           <img src="img/we-do-web-sites.png" alt="web" width="240" height="124">
           <h2>Веб-сайты</h2>
@@ -127,28 +127,20 @@
     </main><!--index div-->
       <footer class="social">
 
-          <div class="map"> <!--Всплывающее окно внутри -->
+          <div class="map"> <!--Всплывающее окно внутри (проще позиционировать) -->
             <!-- <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416"> -->
             <div class="big-map clearfix">
-              <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894615962608!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473025534256" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe> -->
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894615962608!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473025534256" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
               <img class="map-logo" src="img/logo-map2.png" alt="logo-map" width="231" height="190">
               <div class="our-address">
                 <span>NЁRDS DESIGN STUDIO</span>
-
                 <address>
                   191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
                 </address>
                   <span class="telephone">тел. +7 (812) 275-75-75</span>
-
-                <!-- <address>
-                  191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-                  <br>
-                  тел. +7 (812) 275-75-75
-                </address> -->
                 <a class="btn-address" href="#">НАПИШИТЕ НАМ</a>
               </div>
-              <div class="modal-content clearfix"><!-- Всплывающее окно "Напишите нам" -->  <!-- text-popup проходит сквозь float, clearfix не помогает почему-то -->
+              <div class="modal-content clearfix">
                 <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
 
                 <form class="login-form clearfix" action="#" method="post">
