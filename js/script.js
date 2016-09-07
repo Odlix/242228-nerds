@@ -8,8 +8,11 @@
   var email = popup.querySelector("[name=email]");
   var text = popup.querySelector("[name=all-text]");
 
-  var storageLogin = localStorage.getItem("login");
-  var storageEmail = localStorage.getItem("email");
+  try {
+    var storageLogin = localStorage.getItem("login");
+    var storageEmail = localStorage.getItem("email");
+  } catch (exception) {}
+
 
   link.addEventListener("click", function(event) {
     event.preventDefault();
