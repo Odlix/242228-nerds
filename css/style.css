@@ -1512,14 +1512,14 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 .modal-content {
   display: none;
   position: absolute;
-  bottom: -20px;
+  bottom: 10px;
   left: 50%;
   margin-left: -325px;
   box-sizing: border-box;
 
 
   max-width: 704px;
-  padding: 55px 90px 50px 80px;
+  /*padding: 55px 90px 50px 80px;*/
 
   color: #000000;
 
@@ -1603,6 +1603,10 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
   padding-left: 16px;
 }
 
+.login-form {
+  margin: 50px 90px 70px 80px;
+}
+
 .login-form label {
   font-size: 16px;
   font-weight: 500;
@@ -1618,18 +1622,18 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
   display: inline-block;
   float: left;
   margin-right: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .email-popup {
   display: inline-block;
-  float: right;
+  /*float: right;*/
   margin-bottom: 25px;
 }
 
 .text-popup {
-  margin-top: 25px;
-  margin-bottom: 50px;
+  /*margin-top: 25px;*/
+  margin-bottom: 40px;
 }
 
 .modal-content .btn-show {
