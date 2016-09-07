@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,900&subset=cyrillic">
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
+
   </head>
   <body>
 
     <header class="header clearfix">
       <div class="container clearfix">
-        <a class="main-logo" href="#" class="logo"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
+
         <nav class="header-menu clearfix">
+          <a class="main-logo" href="#"><img src="img/Logo.png" alt="logo" width="139" height="56"></a>
           <ul>
             <li>
               <a href="#">СТУДИЯ</a>
@@ -29,6 +31,8 @@
             </li>
           </ul>
         </nav>
+
+
         <div class="cart">
           <a class="login" href="#">КОРЗИНА</a>
         </div>
@@ -46,7 +50,7 @@
           <div class="slides">
             <div class="slide">
               <div class="slide-text">
-                <div class="slide-title">Долго, дорого,<br>скрупулезно</div>
+                <div class="slide-title">Долго, дорого,<br>скрупулезно.</div>
                 <p>Математически выверенный дизайн<br>для вашего сайта или мобильного приложения.</p>
                 <a class="btn-more" href="#">Узнать больше</a>
               </div>
@@ -119,19 +123,19 @@
       </div>
       <hr class="delimiter">
       <div class="partners">
-        <img src="img/partn-gluhanko.png" alt="GLUKHANKO" width="198" height="37" class="image-partners">
-        <img src="img/partn-academy.png" alt="html academy" width="199" height="68" class="image-partners">
-        <img src="img/partn-borod.png" alt="Barbershop" width="209" height="90" class="image-partners">
+        <a href="#" class="image-partners"><img src="img/partn-gluhanko.png" alt="GLUKHANKO" width="198" height="37"></a>
+        <a href="#" class="image-partners"><img src="img/partn-academy.png" alt="html academy" width="199" height="68"></a>
+        <a href="#" class="image-partners"><img src="img/partn-borod.png" alt="Barbershop" width="209" height="90"></a>
       </div>
       <hr class="delimiter">
     </main><!--index div-->
-      <footer class="social">
+      <footer class="social footer-catalog">
 
           <div class="map"> <!--Всплывающее окно внутри (проще позиционировать) -->
-            <!-- <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416"> -->
+            <!-- <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416"> -->  <!-- Указатель, в живой карте не нужен -->
             <div class="big-map clearfix">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894615962608!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473025534256" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
-              <img class="map-logo" src="img/logo-map2.png" alt="logo-map" width="231" height="190">
+
               <div class="our-address">
                 <span>NЁRDS DESIGN STUDIO</span>
                 <address>
@@ -146,28 +150,22 @@
                 <form class="login-form clearfix" action="#" method="post">
                     <div class="login-popup">
                       <label for="pup-login">
-                        <p>Ваше имя:</p>
+                        <span>Ваше имя:</span>
                       </label>
                       <input type="text" name="login" id="pup-login" placeholder="представьтесь, пожалуйста">
                     </div>
                     <div class="email-popup">
                       <label for="pup-email">
-                        <p>Ваш e-mail:</p>
+                        <span>Ваш e-mail:</span>
                       </label>
                       <input type="text"  name="email" id="pup-email" placeholder="для отправки ответа">
                     </div>
                     <div class="text-popup">
                       <label for="pup-text">
-                        <p>Текст письма:</p>
+                        <span>Текст письма:</span>
                       </label>
-                      <textarea type="text"  name="all-text" id="pup-text">в свободной форме</textarea>
-                    </div>
-                    <!-- <div class="text-popup"> -->  <!-- Проба с типом input -->
-                      <!--<label for="pup-text">
-                        <p>Текст письма:</p>
-                      </label>
-                      <input class="popup-text" type="text"  name="all-text" id="pup-text" placeholder="в свободной форме"></input>
-                    </div> -->
+                      <textarea name="all-text" id="pup-text">в свободной форме</textarea>
+                    </div>                   
 
                     <button class="btn-show" type="submit">Отправить</button>
 
@@ -191,60 +189,6 @@
         </div>
       </footer>
 
-    <script type="text/javascript">
-      var link = document.querySelector(".btn-address");
-      var popup = document.querySelector(".modal-content");
-      var close = popup.querySelector(".modal-content-close");
-
-      var login = popup.querySelector("[name=login]");
-      var form = popup.querySelector("form");
-      var email = popup.querySelector("[name=email]");
-      var text = popup.querySelector("[name=all-text]");
-
-      var storageLogin = localStorage.getItem("login");
-      var storageEmail = localStorage.getItem("email");
-
-      link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.add("modal-content-show");
-
-        if (storageLogin || storageEmail) {
-          login.value = storageLogin;
-          email.value = storageEmail;
-          text.focus();
-        } else {
-          login.focus();
-        }
-
-      });
-
-      close.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.remove("modal-content-show");
-        popup.classList.remove("modal-error");
-      });
-
-      form.addEventListener("submit", function(event) {
-        if (!login.value || !email.value || !text.value) {
-          event.preventDefault();
-          popup.classList.remove("modal-error");
-          popup.offsetWidth = popup.offsetWidth;
-          popup.classList.add("modal-error");
-        } else {
-          localStorage.setItem("login", login.value);
-          localStorage.setItem("email", email.value);
-        }
-      });
-
-      window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("modal-content-show")) {
-            popup.classList.remove("modal-content-show");
-            popup.classList.remove("modal-error");
-          }
-        }
-      });
-
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
