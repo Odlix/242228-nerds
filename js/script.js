@@ -38,6 +38,7 @@
     if (!login.value || !email.value || !text.value) {
       event.preventDefault();
       popup.classList.remove("modal-error");
+      // хак для того чтобы окно постоянно тряслось, а не только первый раз при отправке
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("modal-error");
     } else {

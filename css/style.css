@@ -3,7 +3,7 @@ body {
   line-height: 22px;
   color: black;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
   line-height: 36px;
   color: black;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 h2 {
@@ -19,7 +19,7 @@ h2 {
   line-height: 30px;
   color: black;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 p {
@@ -121,7 +121,7 @@ img {
 .header-menu .active {
   position: relative;
   padding-bottom: 7px;
-  background-color: none;
+  background-color: transparent;
 }
 
 .header-menu .active::after {
@@ -337,6 +337,7 @@ img {
   background-color: #fb565a;
 
   text-align: center;
+  border-radius: 3px;
 }
 
 .btn-buy:hover {
@@ -402,7 +403,7 @@ img {
   line-height: 22px;
   color: black;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
 .we-do-card h2 {
@@ -410,7 +411,7 @@ img {
   line-height: 30px;
   color: black;
   font-weight: 500;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   text-transform: uppercase;
 }
 
@@ -507,7 +508,7 @@ img {
 }
 
 .image-partners:hover {
-  opacity: 1; lty
+  opacity: 1;
 }
 
 .image-partners:last-child {
@@ -522,8 +523,11 @@ img {
 
 .big-map {
   position: relative;
-  max-width: inherit;
 
+}
+
+.big-map iframe {
+  width: 100%;
 }
 
 .map-logo {
@@ -563,7 +567,7 @@ img {
 
 .our-address .telephone {
   color: #666;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -574,7 +578,7 @@ img {
 }
 
 .footer-catalog .our-address {
-  padding: 25px 23px 26px 20px;
+  padding: 22px 23px 26px 20px;
 }
 
 .footer-catalog address {
@@ -594,6 +598,7 @@ img {
 
 
   text-align: center;
+  border-radius: 3px;
 }
 
 .btn-address:hover {
@@ -694,7 +699,6 @@ footer .container {
 
     margin-top: 65px;
   }
-}
 /*--End Footer--*/
 
 
@@ -956,6 +960,7 @@ input[type="checkbox"] {
     text-align: center;
     text-transform: uppercase;
     border: 0;
+    border-radius: 3px;
 
     font-size: 12px;
     font-weight: 700;
@@ -992,7 +997,7 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 .sorted a {
   color: black;
-  font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -1114,9 +1119,9 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
 
-.aviator {
+/*.aviator {
   background-image: url("../img/card-1.jpg");
-}
+}*/
 
 .aviator-inside {
   opacity: 0;
@@ -1139,9 +1144,9 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 
 
-.showed {
+/*.showed {
   background-image: url("../img/card-2-2.jpg");
-}
+}*/
 
 .sunset-inside {
 
@@ -1159,10 +1164,10 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
 
-
+/*
 .forte {
   background-image: url("../img/card-3.jpg");
-}
+}*/
 
 .forte-inside {
   opacity: 0;
@@ -1186,9 +1191,9 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 
 
-.organic {
+/*.organic {
   background: url("../img/card-4.jpg")
-}
+}*/
 
 .organic-inside {
   opacity: 0;
@@ -1213,9 +1218,9 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 
 
-.avenue {
+/*.avenue {
   background: url("../img/card-5.jpg");
-}
+}*/
 
 .avenue-inside {
   opacity: 0;
@@ -1238,10 +1243,10 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 
 
-.dovetail {
+/*.dovetail {
   background: url("../img/card-6.jpg");
 
-}
+}*/
 
 .dovetail-inside {
   opacity: 0;
@@ -1360,14 +1365,14 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 .pagination li {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
-  line-height: 1px;
+  font-size: 12px;
+  line-height: 18px;
   vertical-align: top;
 }
 
 .pagination a {
   display: block;
-  padding: 17px 18px;
+  padding: 10px 17px;
   color: black;
   background-color: #f1f1f1;
   text-decoration: none;
@@ -1378,7 +1383,12 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 .pagination .selected-pagi {
   color: black;
   background-color: white;
-  border: 1px solid grey;
+  border: 1px solid #f2f2f2;
+}
+
+.pagination .next-pagi {
+  text-transform: uppercase;
+  padding-left: 30px;
 }
 
 .pagination a:hover {
@@ -1482,6 +1492,21 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 /*POPUP*/
 
+@-webkit-keyframes bounce {
+  0%   {
+    transform: translateY(50px);
+  }
+  70%  {
+    transform: translateY(-30px);
+  }
+  90%  {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes bounce {
   0%   {
     transform: translateY(50px);
@@ -1494,6 +1519,18 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
   }
 }
 
@@ -1529,10 +1566,12 @@ box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 
 .modal-content-show {
   display: block;
+  -webkit-animation: bounce 0.5s;
   animation: bounce 0.5s;
 }
 
 .modal-error {
+  -webkit-animation: shake 0.3s;
   animation: shake 0.3s;
 }
 

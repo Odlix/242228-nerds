@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Нёрдс Каталог</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500&subset=cyrillic">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:500,900&subset=cyrillic">
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header header-catalog clearfix">
@@ -65,10 +65,10 @@
         <!--Сетка-->
         <div class="grid">
           <span>СЕТКА:</span>
-            <input type="radio" name="grid" value="Адаптивная" id="rd1">
+            <input checked type="radio" name="grid" value="Адаптивная" id="rd1">
             <label for="rd1">Адаптивная</label>
 
-            <input checked type="radio" name="grid" value="Фиксированная" id="rd2">
+            <input type="radio" name="grid" value="Фиксированная" id="rd2">
             <label for="rd2">Фиксированная</label>
 
             <input type="radio" name="grid" value="Резиновая" id="rd3">
@@ -115,8 +115,8 @@
         <!-- <div class="layout-card">
           <a href="#"><img src="img/card-1.jpg" alt="Макет" width="240" height="270"></a>
         </div> -->
-        <div class="layout-card aviator">
-
+        <div class="layout-card">
+          <img src="img/card-1.jpg" alt="Макет Aviator" width="240" height="270">
             <div class="aviator-inside">
               <span>aviator</span>
               <p>Одностраничный макет с авторским дизайном</p>
@@ -126,8 +126,8 @@
             </div>
 
         </div>
-        <div class="layout-card showed"> <!--карточка с кнопкой-->
-
+        <div class="layout-card"> <!--карточка с кнопкой-->
+          <img src="img/card-2-2.jpg" alt="Макет Sunset" width="240" height="270">
               <div class="sunset-inside">
                 <span>sunset</span>
                 <p>Интернет-магазин с личным кабинетом</p>
@@ -137,8 +137,8 @@
               </div>
 
         </div>
-        <div class="layout-card forte">
-
+        <div class="layout-card">
+          <img src="img/card-3.jpg" alt="Макет forte" width="240" height="270">
             <div class="forte-inside">
               <span>forte</span>
               <p>Отличный макет для личного блога</p>
@@ -148,8 +148,8 @@
             </div>
 
         </div>
-        <div class="layout-card organic">
-
+        <div class="layout-card">
+          <img src="img/card-4.jpg" alt="Макет organic" width="240" height="270">
             <div class="organic-inside">
               <span>modern organic thai</span>
               <p>Сайт для ресторана быстрого питания</p>
@@ -159,8 +159,8 @@
             </div>
 
         </div>
-        <div class="layout-card avenue">
-
+        <div class="layout-card">
+          <img src="img/card-5.jpg" alt="Макет avenue" width="240" height="270">
             <div class="avenue-inside">
               <span>avenue</span>
               <p>Макет для блога о путешествиях</p>
@@ -170,8 +170,8 @@
             </div>
 
         </div>
-        <div class="layout-card dovetail">
-
+        <div class="layout-card">
+          <img src="img/card-6.jpg" alt="Макет dovetail" width="240" height="270">
             <div class="dovetail-inside">
               <span>dovetail</span>
               <p>Интернет-магазин с галереей товаров</p>
@@ -186,7 +186,7 @@
             <li><a href="#" class="selected-pagi">1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
-            <li><a href="#">Следующая</a></li>
+            <li><a href="#" class="next-pagi">Следующая</a></li>
           </ul>
         </div>
       </div>
@@ -199,7 +199,7 @@
       <div class="map"> <!--Всплывающее окно внутри (проще позиционировать) -->
         <!-- <img class="big-map" src="img/map.jpg" alt="map" width="1199" height="416"> -->  <!-- Указатель, в живой карте не нужен -->
         <div class="big-map clearfix">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894615962608!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473025534256" width="100%" height="416" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.320894615962608!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1473025534256" height="416" style="border:0" allowfullscreen></iframe>
 
           <div class="our-address">
             <span>NЁRDS DESIGN STUDIO</span>
@@ -231,7 +231,7 @@
                   </label>
                   <textarea name="all-text" id="pup-text">в свободной форме</textarea>
                 </div>
-                
+
                 <button class="btn-show" type="submit">Отправить</button>
 
             </form>
